@@ -13,7 +13,4 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'api-with-angular';
 
-  changeTitle() {
-    this.title = 'changed';
-  }
 }
