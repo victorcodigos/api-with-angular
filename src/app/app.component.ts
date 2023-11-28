@@ -12,6 +12,7 @@ import { UserComponent } from './components/user/user.component';
     imports: [CommonModule, RouterOutlet, UserComponent]
 })
 export class AppComponent {
+  userOcuppation: string = "Developer"
   title = 'api-with-angular';
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,9 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
+  @Input() occupation: string = ""; 
   username: string = "Victor" ;
   doesUserExists: boolean = false;
   operationsSystems = [{id: 1, name: 'Windows'}, {id: 2, name: 'Linux'}, {id: 3, name: 'Mac'}];
   isEditable: boolean = true;
 
+  onMouseOver (osName: string): void {
+    console.log(osName)
+  }
+
 }
+

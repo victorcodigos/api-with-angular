@@ -1,7 +1,7 @@
 <section>
-    <h1> Hello {{ username }}</h1>
+    <h1> Hello {{ username }}, you are a {{ occupation}}!</h1>
 
-    <!-- Synthase of IF or ELSE -->
+    <!-- ssyntax of IF or ELSE -->
     @if (doesUserExists) {
     <p> Congratulations! You do exists :D </p>
     } @else {
@@ -9,14 +9,16 @@
     }
 
 
-    <!--- Synthase of FOR -->
+    <!--- syntax of FOR -->
 
     <h3> Here are your list of operationg Systems: </h3>
     <ul>
         @for (os of operationsSystems; track os.id) {
-        <li>{{ os.id }} - {{ os.name }}</li>
+        <li (mouseover)="onMouseOver">{{ os.id }} - {{ os.name }}</li>
         }
     </ul>
+
+     <!--- syntax for a DIV -->
     <div class="editable" [contentEditable]="isEditable">
         
     </div>
