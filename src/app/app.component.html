@@ -1,3 +1,16 @@
-<app-user  (greet)="receiveEmision($event)" [occupation]="userOcuppation"/>
+<section>
+    <app-user (greet)="receiveEmision($event)" [occupation]="userOcuppation" />
+</section>
+
 <p>{{ childsMessage }}</p>
+<section>
+    <h1>Comments</h1>
+    @defer {
+    <comments-component />
+    } @placeholder {
+    <p>Future comments to be loaded!</p>
+    }@loading (minimum 5s){
+    <p>Loading comments</p>
+    }
+</section>
 <router-outlet></router-outlet>

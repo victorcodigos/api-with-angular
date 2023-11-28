@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-comments',
+  selector: 'comments-component',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './comments.component.html',
