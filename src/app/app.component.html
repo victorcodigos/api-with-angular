@@ -4,8 +4,13 @@
 
 <p>{{ childsMessage }}</p>
 <section>
-    <h1>Comments</h1>
-    @defer {
+    <article>
+        In the vast realm of technology, a unique and profound connection often forms between individuals and the art of
+        programming. This connection transcends the mere act of writing code; it embodies a deep-seated passion for
+        problem-solving, creativity, and the ever-evolving world of technology.
+    </article>
+    <h2>Comments</h2>
+    @defer (on viewport) {
     <comments-component />
     } @placeholder {
     <p>Future comments to be loaded!</p>
