@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class UserComponent {
   username: string = "Victor" ;
   doesUserExists: boolean = false;
-  operationsSystems = [{id: 'win', name: 'Windows'}, {id: 'lost', name: 'Linux'}, {id: 'half', name: 'Mac'}];
+  operationsSystems = [{id: 1, name: 'Windows'}, {id: 2, name: 'Linux'}, {id: 3, name: 'Mac'}];
+  isEditable: boolean = true;
 
 }
