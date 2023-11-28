@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class UserComponent {
   username: string = "Victor" ;
-  doesUserExists: boolean = true;
+  doesUserExists: boolean = false;
+  operationsSystems = [{id: 'win', name: 'Windows'}, {id: 'lost', name: 'Linux'}, {id: 'half', name: 'Mac'}];
 
 }

@@ -1,6 +1,18 @@
 <h1> Hello {{ username }}</h1>
+
+<!-- Synthase of IF or ELSE -->
 @if (doesUserExists) {
 <p> Congratulations! You do exists :D </p>
 } @else {
 <p>Sorry, we could not find you!</p>
 }
+
+
+<!--- Synthase of FOR -->
+
+<h3> Here are your list of operationg Systems: </h3>
+<ul>
+    @for (os of operationsSystems; track os.id) {
+        <li>{{ os.id }} - {{ os.name }}</li>
+    }
+</ul>
