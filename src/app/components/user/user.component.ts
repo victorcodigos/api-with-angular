@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class UserComponent {
   @Input() occupation: string = ""; 
+  @Output() greet: EventEmitter<string> = new EventEmitter<string>()
   username: string = "Victor" ;
   doesUserExists: boolean = false;
   operationsSystems = [{id: 1, name: 'Windows'}, {id: 2, name: 'Linux'}, {id: 3, name: 'Mac'}];
@@ -17,6 +18,10 @@ export class UserComponent {
 
   onMouseOver (osName: string): void {
     console.log(osName)
+  }
+
+  emitToParent(): void {
+    this.greet.emit('Hi! I am your child')
   }
 
 }

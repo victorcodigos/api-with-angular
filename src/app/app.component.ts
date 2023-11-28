@@ -15,4 +15,8 @@ export class AppComponent {
   userOcuppation: string = "Developer"
   title = 'api-with-angular';
 
+  receiveEmision($event: string): void {
+    console.log($event)
+  }
+
 }
