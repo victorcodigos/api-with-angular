@@ -10,5 +10,6 @@ import { CommonModule } from '@angular/common';
 })
 export class UserComponent {
   username: string = "Victor" ;
+  doesUserExists: boolean = true;
 
 }

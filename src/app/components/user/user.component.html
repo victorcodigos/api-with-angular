@@ -1,1 +1,6 @@
 <h1> Hello {{ username }}</h1>
+@if (doesUserExists) {
+<p> Congratulations! You do exists :D </p>
+} @else {
+<p>Sorry, we could not find you!</p>
+}
