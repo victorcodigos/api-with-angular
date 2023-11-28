@@ -14,9 +14,10 @@ import { UserComponent } from './components/user/user.component';
 export class AppComponent {
   userOcuppation: string = "Developer"
   title = 'api-with-angular';
+  childsMessage: string = "";
 
   receiveEmision($event: string): void {
-    console.log($event)
+    this.childsMessage = $event;
   }
 
 }
