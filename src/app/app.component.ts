@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './components/user/user.component';
-import { CommentsComponent } from "./components/comments/comments.component";
 
 
 @Component({
@@ -10,7 +9,7 @@ import { CommentsComponent } from "./components/comments/comments.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, UserComponent, CommentsComponent, NgOptimizedImage]
+    imports: [CommonModule, RouterOutlet, UserComponent]
 })
 export class AppComponent {
   userOcuppation: string = "Developer"

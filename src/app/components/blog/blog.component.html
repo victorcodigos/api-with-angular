@@ -1,0 +1,16 @@
+<section>
+    <h1>BLOG</h1>
+    <article>
+        Snow, a magical phenomenon that transforms the world into a winter wonderland, carries with it a unique charm
+        and ethereal beauty. Each delicate snowflake, a masterpiece of nature, falls silently from the sky, creating a
+        serene blanket that blankets the earth in a hushed stillness.
+    </article>
+    <h2>Comments</h2>
+    @defer (on viewport) {
+    <comments-component />
+    } @placeholder {
+    <p>Future comments to be loaded!</p>
+    }@loading (minimum 5s){
+    <p>Loading comments</p>
+    }
+</section>
