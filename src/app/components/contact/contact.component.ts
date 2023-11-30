@@ -11,5 +11,10 @@ import { FormsModule } from '@angular/forms'
 })
 export class ContactComponent {
   favouriteFramework: string = '';
+  
+
+  sendForm() {
+    console.log(this.favouriteFramework)
+  }
 
 }

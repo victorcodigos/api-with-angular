@@ -5,6 +5,9 @@
             Favorite framework:
             <input id="framwork" type="text" [(ngModel)]="favouriteFramework" [ngModelOptions]="{standalone: true}">
         </label>
+        {{ favouriteFramework }}
+        <section>
+            <button class="button" (click)="sendForm()">SEND</button>
+        </section>
     </form>
-    {{ favouriteFramework }}
 </section>
