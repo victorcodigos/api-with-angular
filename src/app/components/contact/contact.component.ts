@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-contact',
@@ -12,8 +12,8 @@ import { FormsModule, ReactiveFormsModule, FormControl, FormGroup } from '@angul
 export class ContactComponent {
   favouriteFramework: string = '';
   contactForm = new FormGroup ({
-    name: new FormControl(''),
-    email: new FormControl('')
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required)
 
   })
 

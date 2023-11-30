@@ -20,7 +20,7 @@
         <label>Email
             <input type="email" formControlName="email">
         </label>
-        <button type="submit">SUBMIT</button>
+        <button [disabled]="!contactForm.valid" type="submit">SUBMIT</button>
     </form>
     <p>Name: {{contactForm.value.name}}</p>
     <p>Email: {{contactForm.value.email}}</p>
