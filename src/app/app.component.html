@@ -3,12 +3,13 @@
         <li>
             <a routerLink="blog/post">BLOG</a>
         </li>
+        <li>
+            <a routerLink="contact">CONTACT</a>
+        </li>
     </ul>
 </nav>
 <section>
     <app-user (greet)="receiveEmision($event)" [occupation]="userOcuppation" />
 </section>
-
-
 <p>{{ childsMessage }}</p>
 <router-outlet></router-outlet>
