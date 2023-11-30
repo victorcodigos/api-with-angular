@@ -1,7 +1,7 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { OpenDirOptions } from 'fs';
+import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
+import { CommonModule, UpperCasePipe } from '@angular/common';
 import { OperatingSystem } from '../../interfaces/operating-system';
+import { OperatingSystemService } from '../../core/operating-systems.service';
 
 @Component({
   selector: 'app-user',
@@ -13,9 +13,10 @@ import { OperatingSystem } from '../../interfaces/operating-system';
 export class UserComponent {
   @Input() occupation: string = ""; 
   @Output() greet: EventEmitter<string> = new EventEmitter<string>()
+  operatingSystemService: OperatingSystemService = inject(OperatingSystemService)
+  operatingSystems: OperatingSystem[] = this.operatingSystemService.getOperatingSystems();
   username: string = "Victor" ;
   doesUserExists: boolean = false;
-  operationsSystems: OperatingSystem [] = [{id: 1, name: 'Windows'}, {id: 2, name: 'Linux'}, {id: 3, name: 'Mac'}];
   isEditable: boolean = true;
 
   onMouseOver (osName: string): void {
