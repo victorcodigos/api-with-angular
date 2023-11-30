@@ -13,4 +13,15 @@
 </section>
 <section>
     <h1>Reactive Forms</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="handleContactFormSubmit()">
+        <label>Name
+            <input type="text" formControlName="name">
+        </label>
+        <label>Email
+            <input type="email" formControlName="email">
+        </label>
+        <button type="submit">SUBMIT</button>
+    </form>
+    <p>Name: {{contactForm.value.name}}</p>
+    <p>Email: {{contactForm.value.email}}</p>
 </section>
